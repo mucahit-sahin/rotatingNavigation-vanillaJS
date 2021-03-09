@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  background: rgb(64, 150, 238);
+  background: -moz-linear-gradient(
+    top,
+    rgba(64, 150, 238, 1) 0%,
+    rgba(64, 150, 238, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(64, 150, 238, 1) 0%,
+    rgba(64, 150, 238, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(64, 150, 238, 1) 0%,
+    rgba(64, 150, 238, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4096ee', endColorstr='#4096ee',GradientType=0 );
+  overflow-x: hidden;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transform-origin: left top;
+  transition: transform 0.5s ease-in;
+  padding: 50px;
+}
+.container.openRotate {
+  transform: rotate(-20deg);
+}
+.circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background: violet;
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  transition: transform 0.5s linear;
+}
+.container.openRotate .circle {
+  transform: rotate(-70deg);
+}
+.circle button {
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.circle button#open {
+  left: 60%;
+}
+
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+.circle .fas {
+  font-size: 30px;
+  color: white;
+}
+
+.content {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 30px;
+  font-family: Roboto;
+  background: rgb(122, 188, 255);
+  background: -moz-linear-gradient(
+    top,
+    rgba(122, 188, 255, 1) 0%,
+    rgba(96, 171, 248, 1) 44%,
+    rgba(64, 150, 238, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(122, 188, 255, 1) 0%,
+    rgba(96, 171, 248, 1) 44%,
+    rgba(64, 150, 238, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(122, 188, 255, 1) 0%,
+    rgba(96, 171, 248, 1) 44%,
+    rgba(64, 150, 238, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+}
+
+nav {
+  position: fixed;
+  bottom: 40px;
+  z-index: 100;
+  transition: transform 0.3s ease-in;
+  transform: translateX(-100%);
+}
+nav ul li {
+  color: white;
+  font-weight: 800;
+  font-size: 1.5rem;
+  list-style: none;
+  margin-bottom: 10px;
+}
+.container.openRotate + nav {
+  transform: translateX(0);
+}
+.container.openRotate + nav ul li {
+  list-style: none;
+  transition: transform 0.3s ease-in;
+  transform: translateX(10px);
+}
+.container.openRotate + nav ul li + li {
+  transform: translateX(20px);
+}
+.container.openRotate + nav ul li + li + li {
+  transform: translateX(30px);
+}
