@@ -5,23 +5,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  background: rgb(64, 150, 238);
-  background: -moz-linear-gradient(
-    top,
-    rgba(64, 150, 238, 1) 0%,
-    rgba(64, 150, 238, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    top,
-    rgba(64, 150, 238, 1) 0%,
-    rgba(64, 150, 238, 1) 100%
-  );
-  background: linear-gradient(
-    to bottom,
-    rgba(64, 150, 238, 1) 0%,
-    rgba(64, 150, 238, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4096ee', endColorstr='#4096ee',GradientType=0 );
+  background: #333333;
   overflow-x: hidden;
 }
 .container {
@@ -31,6 +15,26 @@ body {
   transform-origin: left top;
   transition: transform 0.5s ease-in;
   padding: 50px;
+  background: rgb(122, 188, 255);
+  background: -moz-linear-gradient(
+    top,
+    rgba(122, 188, 255, 1) 0%,
+    rgba(96, 171, 248, 1) 44%,
+    rgba(64, 150, 238, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(122, 188, 255, 1) 0%,
+    rgba(96, 171, 248, 1) 44%,
+    rgba(64, 150, 238, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(122, 188, 255, 1) 0%,
+    rgba(96, 171, 248, 1) 44%,
+    rgba(64, 150, 238, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
 }
 .container.openRotate {
   transform: rotate(-20deg);
@@ -73,29 +77,10 @@ body {
 
 .content {
   margin-top: 20px;
-  padding: 20px;
+  padding: 20px 20%;
   border-radius: 30px;
   font-family: Roboto;
-  background: rgb(122, 188, 255);
-  background: -moz-linear-gradient(
-    top,
-    rgba(122, 188, 255, 1) 0%,
-    rgba(96, 171, 248, 1) 44%,
-    rgba(64, 150, 238, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    top,
-    rgba(122, 188, 255, 1) 0%,
-    rgba(96, 171, 248, 1) 44%,
-    rgba(64, 150, 238, 1) 100%
-  );
-  background: linear-gradient(
-    to bottom,
-    rgba(122, 188, 255, 1) 0%,
-    rgba(96, 171, 248, 1) 44%,
-    rgba(64, 150, 238, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+  background: transparent;
 }
 
 nav {
